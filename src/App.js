@@ -124,21 +124,7 @@ constructor(props) {
     this.setState({showFullItem: !this.state.showFullItem})
   }
 
-  handleSearch(term) {
-    this.setState({ searchTerm: term.toLowerCase() });
-    
-    if (term === '') {
-      this.setState({ currentItems: this.state.items });
-      return;
-    }
-
-    const filteredItems = this.state.items.filter(item => 
-      item.title.toLowerCase().includes(term) || 
-      item.desc.toLowerCase().includes(term)
-    );
-
-    this.setState({ currentItems: filteredItems });
-  }
+ 
 
   // Модифицируем метод chooseCategory для учета поиска
   handleSearch(term) {
